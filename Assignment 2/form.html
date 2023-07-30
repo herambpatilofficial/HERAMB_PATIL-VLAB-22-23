@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Style.css -->
+    <link rel="stylesheet" href="./style.css">
+    <title>Registration Form</title>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+    <div style="border-bottom: 8px solid #ff6600;">
+      <div class="logo">        
+        <a href="https://vlab.co.in" class="navbar-brand">
+          <img src="https://mdmv-nitk.vlabs.ac.in/exp/exp-cantilever-beam-nitk/assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+        </a>
+      
+      <!-- Navbar -->
+      <div id="headerNavbar" class="nav-div" style="float: right; display:block;">
+
+        <ul>
+          <li>
+            <a href="https://vlab.co.in">HOME</a>
+          </li>
+          <li>
+            <a href="https://vlab.co.in/participating-institutes">PARTNERS</a>
+          </li>
+          <li>
+            <a href="https://vlab.co.in/contact-us">CONTACT</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+
+    
+    </nav>
+    <!-- Personal Information Form -->
+    <form>
+        <fieldset class="fieldset">
+            <legend><b>Registration Form</b></legend>
+            <!-- Personal Information -->
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname" required><br><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" required> <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" required> <label for="female">Female</label><br><br>
+            
+            <!-- Progress -->
+            Your Progress: <input type="range" min="0" max="100" step="1"><br><br>
+            
+            <!-- Skills -->
+            <label>Skills:</label><br>
+            <input type="checkbox" name="skill" id="html"><label for="html">HTML</label>
+            <input type="checkbox" name="skill" id="python"><label for="python">Python</label>
+            <input type="checkbox" name="skill" id="java"><label for="java">Java</label>
+            <input type="checkbox" name="skill" id="kotlin"><label for="kotlin">Kotlin</label><br><br>
+            
+            <!-- Time and Month of Registration -->
+            <label for="regTime">Enter time of Registration:</label>
+            <input type="time" id="regTime"><br><br>
+            <label for="regMonth">Select Month of Registration:</label>
+            <input type="month" id="regMonth"><br><br>
+            
+            <!-- Select Branch -->
+            <label for="branch">Select your branch:</label>
+            <select name="branch" id="branch">
+                <option value="cse">CSE</option>
+                <option value="ece">ECE</option>
+                <option value="mech">MECH</option>
+                <option value="civil">CIVIL</option>
+                <option value="eee">EEE</option>
+            </select><br><br>
+            
+            <!-- Search and Upload Documents -->
+            <label for="search">Search Documents:</label>
+            <input type="search" name="search" id="search"> <button>Search</button><br><br>
+            <label for="fileupload">Upload Documents:</label>
+            <input type="file"><br><br>
+            
+            <!-- Submit and Reset Buttons -->
+            <input type="submit">
+            <input type="reset">
+        </fieldset>
+    </form>
+</body>
+</html>

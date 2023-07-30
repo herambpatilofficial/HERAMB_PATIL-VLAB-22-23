@@ -1,0 +1,139 @@
+/* Reset some default browser styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9e0e0;
+}
+
+/* Navigation */
+.nav-div ul{
+            
+    list-style-type: none;
+    
+    margin: 20px;
+    padding: 0;
+}
+
+.nav-div ul li{
+    display: inline;
+    padding: 20px;
+    float: left;
+}
+.nav-div ul li a{
+    text-decoration: none;
+    color: #ac1f1f;
+}
+.pagesnav{
+    color: white;
+}
+.pagesnav:hover{
+    color: yellow;
+    background-color: #000;
+}
+/* Personal Information Form */
+fieldset {
+    width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+legend {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+input[type="month"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+/* Button Green */
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+} 
+
+button:hover {
+    background-color: #3e8e41;
+
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    
+}
+
+.contimage {
+    text-align: center;
+}
+
+.contimage img {
+    width: 70%;
+    margin: 20px 0;
+}
+
+#dob {
+    width: 100%;
+    max-width: 250px;
+}
+
+#regTime,
+#regMonth {
+    width: 100%;
+    max-width: 200px;
+}
+
+#branch {
+    width: 100%;
+    max-width: 250px;
+}
+
+#search {
+    width: 100%;
+    max-width: 250px;
+}
