@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 calculator-container">
+                <h1 class="text-center mb-4">String Calculator</h1>
+
+                <div class="form-group">
+                    <label for="string1">Enter First String:</label>
+                    <input type="text" id="string1" class="form-control" placeholder="Enter first string">
+                </div>
+
+                <div class="form-group">
+                    <label for="string2">Enter Second String:</label>
+                    <input type="text" id="string2" class="form-control" placeholder="Enter second string">
+                </div>
+
+                <div class="form-group">
+                    <label for="index">Enter Index for charAt:</label>
+                    <input type="number" id="index" class="form-control" placeholder="Enter index for charAt">
+                </div>
+
+                <div class="result">
+                    <h3 class="my-4">Results:</h3>
+                    <p id="sliceResult"></p>
+                    <p id="lowercaseResult"></p>
+                    <p id="uppercaseResult"></p>
+                    <p id="charAtResult"></p>
+                    <p id="concatResult"></p>
+                </div>
+
+                <button class="btn btn-primary btn-block" onclick="calculate()">Calculate</button>
+
+                <button class="btn btn-secondary btn-block" onclick="clearInputs()">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TypeScript -->
+    <script src="calculator.js"></script>
+</body>
+</html>
