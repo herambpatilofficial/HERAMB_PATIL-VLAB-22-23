@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    body {
+    background-color: #f2f2f2;
+}
+
+.container {
+    max-width: 800px;
+}
+
+h1 {
+    color: #4CAF50;
+}
+
+.calculator-container {
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-tabs {
+    margin-top: 20px;
+}
+
+.nav-link {
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: #333;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid #4CAF50;
+    color: #4CAF50;
+}
+
+.tab-content {
+    padding: 20px;
+}
+
+</style>
+
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Calculator Website</h1>
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="triangle-tab" data-toggle="tab" href="#triangle" role="tab"
+                    aria-controls="triangle" aria-selected="true">Triangle Area</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="circle-tab" data-toggle="tab" href="#circle" role="tab" aria-controls="circle"
+                    aria-selected="false">Circle Area</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="vowels-tab" data-toggle="tab" href="#vowels" role="tab"
+                    aria-controls="vowels" aria-selected="false">Vowels in String</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="simple-interest-tab" data-toggle="tab" href="#simple-interest" role="tab"
+                    aria-controls="simple-interest" aria-selected="false">Simple Interest</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="prime-number-tab" data-toggle="tab" href="#prime-number" role="tab"
+                    aria-controls="prime-number" aria-selected="false">Prime Number</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="factorial-tab" data-toggle="tab" href="#factorial" role="tab"
+                    aria-controls="factorial" aria-selected="false">Factorial</a>
+            </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="triangle" role="tabpanel" aria-labelledby="triangle-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Calculate the Area of a Triangle</h3>
+                    <div class="form-group">
+                        <label for="sideA">Side A:</label>
+                        <input type="number" id="sideA" class="form-control" placeholder="Enter side A length">
+                    </div>
+                    <div class="form-group">
+                        <label for="sideB">Side B:</label>
+                        <input type="number" id="sideB" class="form-control" placeholder="Enter side B length">
+                    </div>
+                    <div class="form-group">
+                        <label for="sideC">Side C:</label>
+                        <input type="number" id="sideC" class="form-control" placeholder="Enter side C length">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="calculateTriangleArea()">Calculate</button>
+                    <p id="triangleResult" class="result mt-4"></p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="circle" role="tabpanel" aria-labelledby="circle-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Calculate the Area of a Circle</h3>
+                    <div class="form-group">
+                        <label for="radius">Radius:</label>
+                        <input type="number" id="radius" class="form-control" placeholder="Enter radius length">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="calculateCircleArea()">Calculate</button>
+                    <p id="circleResult" class="result mt-4"></p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="vowels" role="tabpanel" aria-labelledby="vowels-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Find Vowels in a String</h3>
+                    <div class="form-group">
+                        <label for="inputString">Enter a String:</label>
+                        <input type="text" id="inputString" class="form-control" placeholder="Enter a string">
+                    </div>
+                    <div class="form-group">
+                        <label for="vowelIndex">Enter Index for charAt:</label>
+                        <input type="number" id="vowelIndex" class="form-control" placeholder="Enter an index">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="findVowels()">Find Vowels</button>
+                    <p id="vowelsResult" class="result mt-4"></p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="simple-interest" role="tabpanel" aria-labelledby="simple-interest-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Simple Interest Calculator</h3>
+                    <div class="form-group">
+                        <label for="principal">Principal Amount:</label>
+                        <input type="number" id="principal" class="form-control" placeholder="Enter principal amount">
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Rate of Interest:</label>
+                        <input type="number" id="rate" class="form-control" placeholder="Enter rate of interest">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time (in years):</label>
+                        <input type="number" id="time" class="form-control" placeholder="Enter time in years">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="calculateSimpleInterest()">Calculate</button>
+                    <p id="simpleInterestResult" class="result mt-4"></p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="prime-number" role="tabpanel" aria-labelledby="prime-number-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Prime Number Calculator</h3>
+                    <div class="form-group">
+                        <label for="number">Enter a Number:</label>
+                        <input type="number" id="number" class="form-control" placeholder="Enter a number">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="checkPrime()">Check Prime</button>
+                    <p id="primeResult" class="result mt-4"></p>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="factorial" role="tabpanel" aria-labelledby="factorial-tab">
+                <div class="calculator-container">
+                    <h3 class="my-4">Factorial Calculator</h3>
+                    <div class="form-group">
+                        <label for="factorialNumber">Enter a Number:</label>
+                        <input type="number" id="factorialNumber" class="form-control" placeholder="Enter a number">
+                    </div>
+                    <button class="btn btn-primary btn-block" onclick="calculateFactorial()">Calculate</button>
+                    <p id="factorialResult" class="result mt-4"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TypeScript -->
+    <script src="calculator.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
