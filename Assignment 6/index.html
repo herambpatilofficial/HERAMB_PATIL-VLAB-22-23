@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="header text-center">
+        <h1>Simple Calculator</h1>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <!-- Inputs -->
+            <div class="col-md-4 offset-md-4 calculator-container">
+                <div class="form-group">
+                    <label for="num1">Enter First Number:</label>
+                    <input type="number" id="num1" class="form-control" placeholder="Enter first number">
+                </div>
+                <div class="form-group">
+                    <label for="num2">Enter Second Number:</label>
+                    <input type="number" id="num2" class="form-control" placeholder="Enter second number">
+                </div>
+
+                <button class="btn btn-primary btn-block" onclick="calculate()">Calculate</button>
+                <!-- Outputs -->
+
+                <h3 class="my-4">Results:</h3>
+                <div class="result">
+                    <p id="addResult"></p>
+                    <p id="subResult"></p>
+                    <p id="mulResult"></p>
+                    <p id="divResult"></p>
+                    <p id="squareResult"></p>
+                </div>
+
+                <button class="btn btn-secondary btn-block" onclick="clearInputs()">Clear</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer text-center">
+        <p>&copy; 2023 Heramb Patil</p>
+    </footer>
+
+    <!-- TypeScript -->
+    <script src="calculator.js"></script>
+</body>
+</html>
